@@ -3,10 +3,11 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",
-    "start:dev": "cross-env NODE_ENV=development concurrently --names ng,nest,apigen --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\" \"nodemon --watch server/src/ --ext ts .utils/api-client-generator-launcher.js\"",
+    "start:dev": "cross-env NODE_ENV=development concurrently --names ng,nest,apigen --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\" \"nodemon --watch server/src/ --ext ts .utils/api-client-generator-launcher.js online\"",
     "build": "npm run build --workspace=server && npm run build-api-client  && npm run build --workspace=client",
     "build-api-client": "node .utils/api-client-generator-launcher.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client",
+    "test-ci": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client -- --browsers=ChromeHeadless --watch=false"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
