@@ -2,8 +2,8 @@
   "name": "angular-nest",
   "private": true,
   "scripts": {
-    "start": "npm run start:prod --workspace=server",
-    "start:dev": "concurrently --names ng,nest --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\"",
+    "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",
+    "start:dev": "cross-env NODE_ENV=development concurrently --names ng,nest --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\"",
     "build": "npm run build --workspace=server && npm run build --workspace=client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +14,8 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
