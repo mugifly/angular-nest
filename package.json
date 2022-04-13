@@ -2,9 +2,11 @@
   "name": "angular-nest",
   "private": true,
   "scripts": {
+    "start:dev": "concurrently --names ng,nest --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "concurrently": "^7.1.0",
     "prettier": "^2.3.2"
   },
   "workspaces": [
