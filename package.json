@@ -3,12 +3,14 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",
-    "start:dev": "cross-env NODE_ENV=development concurrently --names ng,nest --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\"",
-    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "start:dev": "cross-env NODE_ENV=development concurrently --names ng,nest,apigen --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\" \"nodemon --watch server/src/ --ext ts .utils/api-client-generator-launcher.js\"",
+    "build": "npm run build --workspace=server && npm run build-api-client  && npm run build --workspace=client",
+    "build-api-client": "node .utils/api-client-generator-launcher.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.3.2"
   },
   "workspaces": [
@@ -16,6 +18,9 @@
     "server"
   ],
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "json2yaml": "^1.1.0",
+    "ng-openapi-gen": "^0.21.2",
+    "node-fetch": "^2.6.7"
   }
 }
