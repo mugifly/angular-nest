@@ -1,6 +1,6 @@
 # angular-nest
 
-Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen.
+Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen + Angular Material.
 
 Deployable on Heroku (with/without Docker) and other Docker base servers.
 
@@ -13,7 +13,10 @@ Deployable on Heroku (with/without Docker) and other Docker base servers.
 - Angular -- for Frontend app.
 - NestJS -- for Backend app.
 - ng-openapi-gen -- for API Client generation.
+- Angular Material -- for UI.
+  - NOTE: There is also a [vanilla branch](https://github.com/mugifly/angular-nest/tree/vanilla) that doesn't include Angular Material.
 - Docker -- for Production environment.
+  - NOTE: Deployments without Docker are also supported.
 - Karma + Jasmine -- for Unit testing of Frontend (with Puppeteer + Headless Chromium)
 - Jest -- for Unit testing of Backend
 - GitHub Actions -- for CI
@@ -75,6 +78,13 @@ $ npm run test -w server
 ### E2E test
 
 #TODO
+
+---
+
+## Variation
+
+- [master](https://github.com/mugifly/angular-nest/tree/master) branch - with Angular Material
+- [vanilla](https://github.com/mugifly/angular-nest/tree/vanilla) branch - Vanilla (without Angular Material)
 
 ---
 
