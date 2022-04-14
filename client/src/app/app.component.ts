@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { ApiService } from 'src/.api-client/services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'client';
+  $getHello!: Observable<void>;
+
+  constructor(private api: ApiService) {}
+
+  getHello() {
+    this.$getHello = this.api.appControllerGetHello();
+  }
 }

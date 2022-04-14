@@ -1,0 +1,36 @@
+.content {
+  align-items: flex-start;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 2rem;
+  min-height: calc(100vh - 64px);
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    mat-card {
+      display: relative;
+      height: auto;
+      width: 45%;
+      margin-bottom: 10%;
+    }
+
+    mat-card a {
+      color: #3f51b5;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    .cards {
+      flex-direction: column;
+
+      mat-card {
+        width: 90% !important;
+      }
+    }
+  }
+}
