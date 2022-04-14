@@ -25,11 +25,11 @@ Deployable on Heroku (with/without Docker) and other Docker base servers.
 ### Deploy on Heroku
 
 This app supports deploying as a production environment to Heroku (with Heroku Button) or other Docker based server.
-Also, you don't have to do the build process locally or in CI, so it's easy.
+Also you don't have to do the build process locally or in CI, so it's easy.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mugifly/angular-nest)
 
-Or, this app can also be deployed as Node.js application using `Heroku-*` stack, that is not Docker image based on [`Container` stack](https://devcenter.heroku.com/articles/stack).
+Or, this app can also be deployed as Node.js application using [`Heroku-*` stack](https://devcenter.heroku.com/articles/stack), that is not Docker image based on `Container` stack.
 
 ### Development on your local
 
