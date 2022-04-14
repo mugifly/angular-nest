@@ -10,6 +10,8 @@ Deployable on Heroku (with/without Docker) and other Docker base servers.
 
 ## Key Elements
 
+There is some variations... https://github.com/mugifly/angular-nest/wiki#variations
+
 - Angular -- for Frontend app.
 - NestJS -- for Backend app.
 - ng-openapi-gen -- for API Client generation.
@@ -78,13 +80,6 @@ $ npm run test -w server
 ### E2E test
 
 #TODO
-
----
-
-## Variation
-
-- [master](https://github.com/mugifly/angular-nest/tree/master) branch - with Angular Material
-- [vanilla](https://github.com/mugifly/angular-nest/tree/vanilla) branch - Vanilla (without Angular Material)
 
 ---
 
