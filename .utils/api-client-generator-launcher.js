@@ -15,7 +15,7 @@ class APIClientGeneratorLauncher {
   static SERVER_DIR = `${__dirname}/../server`;
   static CLIENT_DIR = `${__dirname}/../client`;
   static API_DOC_YAML_PATH = `${APIClientGeneratorLauncher.SERVER_DIR}/api.yaml`;
-  static API_CLIENT_OUTPUT_PATH = `${APIClientGeneratorLauncher.CLIENT_DIR}/.api-client`;
+  static API_CLIENT_OUTPUT_PATH = `${APIClientGeneratorLauncher.CLIENT_DIR}/src/.api-client`;
 
   constructor() {}
 
