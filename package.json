@@ -7,10 +7,17 @@
     "build": "npm run build --workspace=server && npm run build-api-client  && npm run build --workspace=client",
     "build-api-client": "node .utils/api-client-generator-launcher.js",
     "test": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client",
-    "test-ci": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client -- --browsers=ChromeHeadless --watch=false"
+    "test-ci": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client -- --browsers=ChromeHeadless --watch=false",
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
     "concurrently": "^7.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4",
     "nodemon": "^2.0.15",
     "prettier": "^2.3.2"
   },
@@ -23,5 +30,21 @@
     "json2yaml": "^1.1.0",
     "ng-openapi-gen": "^0.21.2",
     "node-fetch": "^2.6.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableSubjectLowerCase": true
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        0
+      ]
+    }
   }
 }

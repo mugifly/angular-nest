@@ -4,7 +4,9 @@ Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen + Angular 
 
 Deployable on Heroku (with/without Docker) and other Docker base servers.
 
-[![Build](https://github.com/mugifly/angular-nest/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/mugifly/angular-nest/actions/workflows/build.yml)
+[![Build](https://img.shields.io/github/workflow/status/mugifly/angular-nest/Build/master?style=flat-square)](https://github.com/mugifly/angular-nest/actions/workflows/build.yml)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=flat-square)](https://conventionalcommits.org)
 
 ---
 
