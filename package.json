@@ -9,7 +9,7 @@
     "test": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client",
     "test-ci": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client -- --browsers=ChromeHeadless --watch=false",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "node --eval 'process.exit(process.env.NODE_ENV == \"production\" ? 0 : 1)' || husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
