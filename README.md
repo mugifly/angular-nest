@@ -2,7 +2,7 @@
 
 Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen + Angular Material.
 
-Deployable on Heroku (with/without Docker) and other Docker base servers.
+Deployable on Heroku (with/without Docker) and other [Docker based servers](https://github.com/mugifly/angular-nest/wiki#deployments).
 
 [![Build](https://img.shields.io/github/workflow/status/mugifly/angular-nest/Build/master?style=flat-square)](https://github.com/mugifly/angular-nest/actions/workflows/build.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
@@ -29,18 +29,27 @@ There is some variations... https://github.com/mugifly/angular-nest/wiki#variati
 
 ## Quick Start
 
-### Deploy on Heroku
+### Deployment on Heroku
 
-This app supports deploying as a production environment to Heroku (with Heroku Button) or other Docker based server.
+This app supports deploying as a production environment to Heroku.
 Also you don't have to do the build process locally or in CI, so it's easy.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mugifly/angular-nest)
+Try it now from the Heroku Button:<br>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Or, this app can also be deployed as Node.js application using [`Heroku-*` stack](https://devcenter.heroku.com/articles/stack), that is not Docker image based on `Container` stack.
+Or, this app can also be deployed to Container stack on Heroku, as Docker based application.
 
-### Development on your local
+Please see [Deploy to Heroku](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Heroku) page on the wiki to learn more.
+
+### Deployment on Docker based servers
+
+https://github.com/mugifly/angular-nest/wiki/#Deployments
+
+### Development on Local
 
 Before you start, you should install the following software:
+
+- Git
 
 - Node.js v16+
 
