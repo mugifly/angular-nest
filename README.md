@@ -2,7 +2,7 @@
 
 Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen.
 
-Deployable on Heroku (with/without Docker) and other [Docker based servers](https://github.com/mugifly/angular-nest/wiki#deployments).
+Deployable on Heroku, Render, Google App Engine (GAE) and other hosting services using with/without Docker ([learn more](https://github.com/mugifly/angular-nest/wiki/#Deployments)).
 
 [![Build](https://github.com/mugifly/angular-nest/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/mugifly/angular-nest/actions/workflows/build.yml)
 
@@ -17,24 +17,33 @@ Deployable on Heroku (with/without Docker) and other [Docker based servers](http
 - Karma + Jasmine -- for Unit testing of Frontend (with Puppeteer + Headless Chromium)
 - Jest -- for Unit testing of Backend
 - GitHub Actions -- for CI
+- npm Workspaces - for Monorepo structure.
 
 ---
 
 ## Quick Start
 
+This app supports direct deployment to [various hosting services](https://github.com/mugifly/angular-nest/wiki/#Deployments) as a production environment.
+
+It's also very easy to automatic-deployment, because you don't have to run the build process locally or in CI.
+
 ### Deployment on Heroku
 
-This app supports deploying as a production environment to Heroku.
-Also you don't have to do the build process locally or in CI, so it's easy.
-
-Try it now from the Heroku Button:<br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Or, this app can also be deployed to Container stack on Heroku, as Docker based application.
+This app can be deployed either to the `Heroku` stack (Node.js buildpack based) or the `Container` stack (Docker based).
 
-Please see [Deploy to Heroku](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Heroku) page on the wiki to learn more.
+Please see [Deploy to Heroku](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Heroku) page for more informations.
 
-### Deployment on Docker based servers
+### Deployment on Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+This app can be deployed either as a Node.js application or Docker based application.
+
+Please see [Deploy to Render](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Render) page for more informations.
+
+### Deployment on other servers (with/without Docker)
 
 https://github.com/mugifly/angular-nest/wiki/#Deployments
 
