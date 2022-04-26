@@ -48,10 +48,12 @@ Before you start, you should install the following software:
 
 - Visual Studio Code
 
-Then, please execute as the following in your terminal:
+Next, please [fork this repository](https://github.com/mugifly/angular-nest/fork).
+
+Then, execute as the following in your terminal:
 
 ```
-$ git clone git@github.com:mugifly/angular-nest.git
+$ git clone git@github.com:YOUR_GITHUB_NAME/angular-nest.git
 $ cd angular-nest/
 
 $ npm install
@@ -59,31 +61,26 @@ $ npm install
 $ npm run start:dev
 ```
 
-After that, open the web browser and navigate to `http://localhost:4200/`.
+Finally, open the web browser and navigate to `http://localhost:4200/`.
+Also, when you edit the frontend source-code, auto-reloading applies your changes to the browser immediately.
 
-Also, when you edit the frontend source-code, auto-reloading applies it to your browser immediately.
+See the [Wiki](https://github.com/mugifly/angular-nest/wiki/) for more information.
 
 ---
 
-## Testing
+## CLI Commands
 
-### Unit test for Frontend
-
-Requirements: Google Chrome and [dependencies of Puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md)
-
-```
-$ npm run test -w client
-```
-
-### Unit test for Backend
-
-```
-$ npm run test -w server
-```
-
-### E2E test
-
-#TODO
+- Start the development server (watch mode): &nbsp; `npm run start:dev`
+- Start the production app: &nbsp; `npm run build && npm run start`
+- Angular CLI (@angular/cli): &nbsp; `npm run ng`
+  - Generate component: &nbsp; `npm run ng -- generate component foo-bar`
+  - Other `ng` commands can also be run by typing it after `npm run ng -- `. See [here](https://angular.io/cli#command-overview) for a list of the available commands.
+- Nest CLI (@nestjs/cli): &nbsp; `npm run nest`
+  - Generate controller: &nbsp; `npm run nest -- generate controller foo-bar`
+  - Other `nest` commands can also be run by typing it after `npm run nest -- `. See [here](https://docs.nestjs.com/cli/usages) for a list of the available commands.
+- Testing:
+  - Execute the unit tests for frontend: &nbsp; `npm run test -w client` &nbsp; (Google Chrome and [dependencies of Puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md) required)
+  - Execute the unit tests for backend: &nbsp; `npm run test -w server`
 
 ---
 
