@@ -29,6 +29,7 @@ jobs:
         with:
           check_name: 'Test Report - Client'
           report_paths: 'client/TESTS-*.xml'
+          fail_on_failure: True
           require_tests: True
 
       - name: Upload test report for server
@@ -37,4 +38,5 @@ jobs:
         with:
           check_name: 'Test Report - Server'
           report_paths: 'server/junit.xml'
+          fail_on_failure: True
           require_tests: True

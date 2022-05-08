@@ -10,7 +10,7 @@
     "build": "npm run build --workspace=server && npm run build-api-client  && npm run build --workspace=client",
     "build-api-client": "node .utils/api-client-generator-launcher.js",
     "test": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client",
-    "test:ci": "npm run test:ci --workspace=server && npm run build-api-client && npm run test:ci --workspace=client",
+    "test:ci": "concurrently --max-processes=1 --raw --success=all \"npm run test:ci --workspace=server\" \"npm run build-api-client && npm run test:ci --workspace=client\"",
     "ng": "npx --workspace=client ng",
     "nest": "npx --workspace=server nest"
   },
