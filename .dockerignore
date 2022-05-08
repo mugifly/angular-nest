@@ -4,6 +4,8 @@ client/node_modules/
 server/node_modules/
 client/dist/
 server/dist/
+client/TESTS-*.xml
+server/junit.xml
 
 # VCS files
 .git/

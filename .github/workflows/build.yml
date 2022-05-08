@@ -21,4 +21,20 @@ jobs:
           CI: true
 
       - name: Test app
-        run: npm run test-ci
+        run: npm run test:ci
+
+      - name: Upload test report for client
+        uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
+        if: always()
+        with:
+          check_name: 'Test Report - Client'
+          report_paths: 'client/TESTS-*.xml'
+          require_tests: True
+
+      - name: Upload test report for server
+        uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
+        if: always()
+        with:
+          check_name: 'Test Report - Server'
+          report_paths: 'server/junit.xml'
+          require_tests: True
