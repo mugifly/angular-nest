@@ -22,7 +22,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('mat-card-title')?.textContent).toContain(
-      'What is this?',
+      'What is thisaaaaaaaaa?',
     );
   });
 });
