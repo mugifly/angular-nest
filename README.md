@@ -1,6 +1,6 @@
 # angular-nest
 
-Simple web app template with Angular v13 + NestJS v8 + ng-openapi-gen.
+Simple web app template with Angular + NestJS + ng-openapi-gen.
 
 Deployable on Heroku, Render, Google App Engine (GAE) and other hosting services using with/without Docker ([learn more](https://github.com/mugifly/angular-nest/wiki/#Deployments)).
 
