@@ -5,9 +5,11 @@
 <div class="content">
   <div class="cards">
     <mat-card>
-      <mat-card-title>What is this?</mat-card-title>
+      <mat-card-header>
+        <mat-card-title>What is this?</mat-card-title>
+      </mat-card-header>
       <mat-card-content>
-        Simple web app template with Angular v13 + NestJS + ng-openapi-gen.<br />
+        Simple web app template with Angular v15 + NestJS + ng-openapi-gen.<br />
         <a
           href="https://github.com/mugifly/angular-nest"
           target="_blank"
@@ -19,7 +21,9 @@
     </mat-card>
 
     <mat-card>
-      <mat-card-title>Example request to NestJS</mat-card-title>
+      <mat-card-header>
+        <mat-card-title>Example request to NestJS</mat-card-title>
+      </mat-card-header>
       <mat-card-content>
         {{ $getHello | async }}
       </mat-card-content>
