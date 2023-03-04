@@ -82,7 +82,7 @@ https://github.com/mugifly/angular-nest/wiki/#Deployments
 
 ### Start
 
-- Start the development server (watch mode): &nbsp; `npm run start:dev`
+- Start the development server (watch mode): &nbsp; `npm run dev`
 - Start the production app: &nbsp; `npm run build && npm run start`
 
 ### Angular CLI & Nest CLI
