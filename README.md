@@ -49,7 +49,7 @@ https://github.com/mugifly/angular-nest/wiki/#Deployments
 
 ### Development on Local
 
-Before you start, you should install the following software:
+Before you start, you should install the following softwares:
 
 - Git
 
@@ -57,7 +57,7 @@ Before you start, you should install the following software:
 
 - Visual Studio Code
 
-Next, please [fork this repository](https://github.com/mugifly/angular-nest/fork).
+Next, please [Create a new repository from this repository](https://github.com/mugifly/angular-nest/generate).
 
 Then, execute as the following in your terminal:
 
@@ -73,23 +73,36 @@ $ npm run start:dev
 Finally, open the web browser and navigate to `http://localhost:4200/`.
 Also, when you edit the frontend source-code, auto-reloading applies your changes to the browser immediately.
 
-See the [Wiki](https://github.com/mugifly/angular-nest/wiki/) for more information.
+See the [Wiki](https://github.com/mugifly/angular-nest/wiki/) for additional information.
+You'll find tips for implementing database connectivity, guides for future updates, and more.
 
 ---
 
 ## CLI Commands
 
+### Start
+
 - Start the development server (watch mode): &nbsp; `npm run start:dev`
 - Start the production app: &nbsp; `npm run build && npm run start`
+
+### Angular CLI & Nest CLI
+
 - Angular CLI (@angular/cli): &nbsp; `npm run ng`
   - Generate component: &nbsp; `npm run ng -- generate component foo-bar`
   - Other `ng` commands can also be run by typing it after `npm run ng -- `. See [here](https://angular.io/cli#command-overview) for a list of the available commands.
 - Nest CLI (@nestjs/cli): &nbsp; `npm run nest`
   - Generate controller: &nbsp; `npm run nest -- generate controller foo-bar`
   - Other `nest` commands can also be run by typing it after `npm run nest -- `. See [here](https://docs.nestjs.com/cli/usages) for a list of the available commands.
-- Testing:
-  - Execute the unit tests for frontend: &nbsp; `npm run test -w client` &nbsp; (Google Chrome and [dependencies of Puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md) required)
-  - Execute the unit tests for backend: &nbsp; `npm run test -w server`
+
+### Testing
+
+- Unit tests for frontend: &nbsp; `npm run test -w client` &nbsp; (Google Chrome and [dependencies of Puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md) required)
+- Unit tests for backend: &nbsp; `npm run test -w server`
+
+### Install npm modules
+
+- Install for frontend: `npm install -w client XXXXX`
+- Install for backend: `npm install -w server XXXXX`<br>(e.g. `npm install -w server @nestjs/typeorm typeorm`)
 
 ---
 
