@@ -32,26 +32,6 @@ This app supports direct deployment to [various hosting services](https://github
 
 It's also very easy to automatic-deployment, because you don't have to run the build process locally or in CI.
 
-### Deployment on Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-This app can be deployed either to the `Heroku` stack (Node.js buildpack based) or the `Container` stack (Docker based).
-
-Please see [Deploy to Heroku](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Heroku) page for more informations.
-
-### Deployment on Render
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
-This app can be deployed either as a Node.js application or Docker based application.
-
-Please see [Deploy to Render](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Render) page for more informations.
-
-### Deployment on other servers (with/without Docker)
-
-https://github.com/mugifly/angular-nest/wiki/#Deployments
-
 ### Development on Local
 
 Before you start, you should install the following softwares:
@@ -80,6 +60,26 @@ Also, when you edit the frontend source-code, auto-reloading applies your change
 
 See the [Wiki](https://github.com/mugifly/angular-nest/wiki/) for additional information.
 You'll find tips for implementing database connectivity, guides for future updates, and more.
+
+### Deployment on Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+This app can be deployed either to the `Heroku` stack (Node.js buildpack based) or the `Container` stack (Docker based).
+
+Please see [Deploy to Heroku](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Heroku) page for more informations.
+
+### Deployment on Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+This app can be deployed either as a Node.js application or Docker based application.
+
+Please see [Deploy to Render](https://github.com/mugifly/angular-nest/wiki/Deploy-to-Render) page for more informations.
+
+### Deployment on other servers (with/without Docker)
+
+https://github.com/mugifly/angular-nest/wiki/#Deployments
 
 ---
 
