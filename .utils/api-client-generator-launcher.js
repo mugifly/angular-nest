@@ -25,7 +25,9 @@ class APIClientGeneratorLauncher {
       try {
         apiDoc = await this.getApiDocOnline();
       } catch (e) {
-        console.warn(e);
+        console.warn(
+          'Failed to get API document from API server. Trying again offline...',
+        );
       }
     }
     if (!apiDoc) {
