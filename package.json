@@ -7,16 +7,18 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",
     "start:dev": "npm run dev",
-    "dev": "cross-env NODE_ENV=development concurrently --names ng,nest,apigen --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\" \"nodemon --watch server/src/ --ext ts .utils/api-client-generator-launcher.js online\"",
+    "dev": "npm run build-api-client && npm run generate-dev-dummy-page && cross-env NODE_ENV=development concurrently --names ng,nest,apigen --kill-others \"npm run start:dev --workspace=client\" \"npm run start:dev --workspace=server\" \"nodemon --watch server/src/ --ext ts .utils/api-client-generator-launcher.js online\"",
     "build": "npm run build --workspace=server && npm run build-api-client && npm run build --workspace=client",
     "build-api-client": "node .utils/api-client-generator-launcher.js",
     "test": "npm run test --workspace=server && npm run build-api-client && npm run test --workspace=client",
     "test:ci": "concurrently --max-processes=1 --raw --success=all \"npm run test:ci --workspace=server\" \"npm run build-api-client && npm run test:ci --workspace=client\"",
+    "generate-dev-dummy-page": "node .utils/dev-dummy-page-generator.js",
     "ng": "npx --workspace=client ng",
     "nest": "npx --workspace=server nest"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "mkdirp": "^3.0.1",
     "nodemon": "^2.0.15",
     "prettier": "^3.2.5"
   },
