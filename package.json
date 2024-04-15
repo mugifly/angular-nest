@@ -2,7 +2,7 @@
   "name": "angular-nest",
   "private": true,
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",
@@ -29,7 +29,8 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "json2yaml": "^1.1.0",
-    "ng-openapi-gen": "^0.21.2",
-    "node-fetch": "^2.6.7"
+    "ng-openapi-gen": "^0.51.0",
+    "node-fetch": "^2.6.7",
+    "typescript": "^5.4.5"
   }
 }
