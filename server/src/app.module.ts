@@ -6,10 +6,10 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    // Serve the frontend (Angular) app (../../client/dist/client/) as a static files
+    // Serve the frontend (Angular) app (../../client/dist/browser/) as a static files
     // (for production environment)
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', '..', 'client', 'dist', 'client'),
+      rootPath: join(__dirname, '..', '..', 'client', 'dist', 'browser'),
     }),
   ],
   controllers: [AppController],
