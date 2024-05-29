@@ -9,13 +9,12 @@ import { RouterModule, provideRouter } from '@angular/router';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RouterModule],
-      providers: [
+    imports: [RouterModule, AppComponent],
+    providers: [
         provideHttpClient(withInterceptorsFromDi()),
         provideRouter([]),
-      ],
-    }).compileComponents();
+    ],
+}).compileComponents();
   });
 
   it('should create the app', () => {
