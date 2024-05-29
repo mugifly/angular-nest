@@ -2,7 +2,7 @@
   "name": "angular-nest",
   "private": true,
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run start:prod --workspace=server",

@@ -33,7 +33,7 @@ Before you start, you should install the following softwares:
 
 - Git
 
-- Node.js v16+
+- Node.js v20+
 
 - Visual Studio Code
 
