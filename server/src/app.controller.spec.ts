@@ -16,7 +16,7 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return string with "Hello World"', () => {
-      expect(appController.getHello()).toContain('Hello World');
+      expect(appController.getExampleText()).toContain('Hello World');
     });
   });
 });

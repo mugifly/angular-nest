@@ -19,16 +19,38 @@
         </a>
       </mat-card-content>
     </mat-card>
+  </div>
+
+  <div class="cards">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Example request (plain text)</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        {{ $exampleText | async }}
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button (click)="getExampleText()" mat-button>Request</button>
+      </mat-card-actions>
+    </mat-card>
 
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Example request to NestJS</mat-card-title>
+        <mat-card-title>Example request (object)</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        {{ $getHello | async }}
+        @if ($exampleArticle | async; as article) {
+          <ul>
+            <li>Title: {{ article.title }}</li>
+            <li>ID: {{ article.id }}</li>
+            <li>
+              Updated at: {{ article.updatedAt | date: 'yyyy-MM-dd HH:mm:ss' }}
+            </li>
+          </ul>
+        }
       </mat-card-content>
       <mat-card-actions align="end">
-        <button (click)="getHello()" mat-button>Request</button>
+        <button (click)="getExampleArticle()" mat-button>Request</button>
       </mat-card-actions>
     </mat-card>
   </div>

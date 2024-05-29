@@ -8,13 +8,14 @@
   .cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
 
     mat-card {
       display: relative;
       height: auto;
-      width: 45%;
-      margin-bottom: 10%;
+      width: 50%;
     }
 
     mat-card a {
