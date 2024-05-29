@@ -10,8 +10,7 @@ import { MaterialModule } from 'src/material.module';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [MaterialModule],
+      imports: [MaterialModule, AppComponent],
       providers: [
         provideHttpClient(withInterceptorsFromDi()),
         provideRouter([]),
