@@ -1,15 +1,22 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { provideRouter } from '@angular/router';
+import { MaterialModule } from 'src/material.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [AppComponent],
-    imports: [RouterTestingModule],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
-}).compileComponents();
+      declarations: [AppComponent],
+      imports: [MaterialModule],
+      providers: [
+        provideHttpClient(withInterceptorsFromDi()),
+        provideRouter([]),
+      ],
+    }).compileComponents();
   });
 
   it('should create the app', () => {
