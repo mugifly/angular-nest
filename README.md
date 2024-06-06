@@ -32,7 +32,7 @@ There is some variations... https://github.com/mugifly/angular-nest/wiki#variati
 
 StackBlitz lets you quickly run and edit your source code in your browser.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/mugifly/angular-nest)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mugifly/angular-nest/tree/master?file=client%2Fsrc%2Fapp%2Fapp.component.html)
 
 ### Local
 
