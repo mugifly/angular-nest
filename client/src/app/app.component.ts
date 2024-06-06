@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { MaterialModule } from 'src/material.module';
-import { ApiService } from 'src/.api-client/services/api.service';
-import { Article } from 'src/.api-client/models/article';
+import { MaterialModule } from '../material.module';
+import { ApiService } from '../.api-client/services/api.service';
+import { Article } from '../.api-client/models/article';
 
 @Component({
   selector: 'app-root',

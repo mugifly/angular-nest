@@ -14,7 +14,7 @@ class DummyPageGenerator {
   constructor() {}
 
   start() {
-    const clientDistDir = `${DummyPageGenerator.CLIENT_DIR}/dist/client/`;
+    const clientDistDir = `${DummyPageGenerator.CLIENT_DIR}/dist/browser/`;
     mkdirp.sync(clientDistDir);
 
     const html = `<!DOCTYPE html>
