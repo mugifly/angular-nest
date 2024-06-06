@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <span>angular-nest</span>
 </mat-toolbar>
 
@@ -30,7 +30,7 @@
         {{ $exampleText | async }}
       </mat-card-content>
       <mat-card-actions align="end">
-        <button (click)="getExampleText()" mat-button>Request</button>
+        <button (click)="getExampleText()" mat-flat-button>Request</button>
       </mat-card-actions>
     </mat-card>
 
@@ -50,7 +50,7 @@
         }
       </mat-card-content>
       <mat-card-actions align="end">
-        <button (click)="getExampleArticle()" mat-button>Request</button>
+        <button (click)="getExampleArticle()" mat-flat-button>Request</button>
       </mat-card-actions>
     </mat-card>
   </div>
