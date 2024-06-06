@@ -5,7 +5,7 @@ import {
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideRouter } from '@angular/router';
-import { MaterialModule } from 'src/material.module';
+import { MaterialModule } from '../material.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
