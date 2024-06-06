@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from '../material.module';
 import { ApiService } from '../.api-client/services/api.service';
 import { Article } from '../.api-client/models/article';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,8 @@ import { Article } from '../.api-client/models/article';
 export class AppComponent {
   $exampleText!: Observable<string>;
   $exampleArticle!: Observable<Article>;
+
+  isProduction = environment.production;
 
   constructor(private api: ApiService) {}
 
