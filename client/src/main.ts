@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-import { ApiModule } from 'src/.api-client/api.module';
+import { ApiModule } from './.api-client/api.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
