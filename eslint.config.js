@@ -1,15 +1,13 @@
-// @ts-check
+const eslint = require('@eslint/js');
+const tseslint = require('typescript-eslint');
+const globals = require('globals');
+const eslintConfigPrettier = require('eslint-config-prettier');
+const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
 
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import globals from 'globals';
-
-import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-
-export default [
+module.exports = [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  ...tseslint.configs.stylistic,
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   {
@@ -19,12 +17,15 @@ export default [
         ...globals.jest,
       },
     },
-    ignores: ['.eslintrc.js'],
     rules: {
       '@typescript-eslint/interface-name-prefix': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
     },
+  },
+  {
+    ignores: ['eslint.config.js'],
   },
 ];
