@@ -107,9 +107,11 @@ https://github.com/mugifly/angular-nest/wiki/#Deployments
 ### Testing
 
 - Unit tests for frontend: &nbsp; `npm run test -w client` &nbsp; (Google Chrome and [dependencies of Puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md) required)
+  - NOTE: If you have never generated an API client (or run `npm run dev`), you should run `npm run build-api-client` before running the test.
 - Unit tests for backend: &nbsp; `npm run test -w server`
+- E2E tests for backend: &nbsp; `npm run test:e2e -w server`
 
-### Install npm modules
+### Install npm modules1
 
 - Install for frontend: `npm install -w client XXXXX`
 - Install for backend: `npm install -w server XXXXX`<br>(e.g. `npm install -w server @nestjs/typeorm typeorm`)

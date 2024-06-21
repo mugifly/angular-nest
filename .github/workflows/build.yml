@@ -16,27 +16,52 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        id: install_deps
         run: npm install
         env:
           CI: true
 
-      - name: Test app
-        run: npm run test:ci
+      - name: Test for Server (Unit)
+        run: npm run test --workspace=server -- --ci --reporters=default --reporters=jest-junit
+        env:
+          JEST_JUNIT_OUTPUT_NAME: 'junit-unit.xml'
+        continue-on-error: true
 
-      - name: Upload test report for client
+      - name: Test for Server (E2E)
+        run: npm run test:e2e --workspace=server -- --ci --reporters=default --reporters=jest-junit
+        env:
+          JEST_JUNIT_OUTPUT_NAME: 'junit-e2e.xml'
+        continue-on-error: true
+
+      - name: Test for Client
+        run: |
+          npm run build-api-client
+          npm run test --workspace=client -- --browsers=ChromeHeadless --reporters=progress,junit --watch=false
+        continue-on-error: true
+
+      - name: Upload test report for Server (Unit)
+        uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
+        if: always()
+        with:
+          check_name: 'Test Report - Server (Unit)'
+          report_paths: 'server/junit-unit.xml'
+          fail_on_failure: True
+          require_tests: True
+
+      - name: Upload test report for Server (E2E)
+        uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
+        if: always()
+        with:
+          check_name: 'Test Report - Server (E2E)'
+          report_paths: 'server/junit-e2e.xml'
+          fail_on_failure: True
+          require_tests: True
+
+      - name: Upload test report for Client
         uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
         if: always()
         with:
           check_name: 'Test Report - Client'
           report_paths: 'client/TESTS-*.xml'
-          fail_on_failure: True
-          require_tests: True
-
-      - name: Upload test report for server
-        uses: mikepenz/action-junit-report@41a3188dde10229782fd78cd72fc574884dd7686
-        if: always()
-        with:
-          check_name: 'Test Report - Server'
-          report_paths: 'server/junit.xml'
           fail_on_failure: True
           require_tests: True
