@@ -30,6 +30,6 @@
     "json2yaml": "^1.1.0",
     "ng-openapi-gen": "^0.51.0",
     "node-fetch": "^2.6.7",
-    "typescript": "^5.4.5"
+    "typescript": "5.4.5"
   }
 }
