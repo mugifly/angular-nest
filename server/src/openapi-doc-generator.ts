@@ -2,6 +2,7 @@ import { Test } from '@nestjs/testing';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import * as fs from 'fs';
 import { AppModule } from './app.module';
+import { Helper } from './helper';
 
 async function bootstrap(): Promise<void> {
   // Get the modules included by AppModule
@@ -18,16 +19,21 @@ async function bootstrap(): Promise<void> {
     providers = providers.concat(Reflect.getMetadata('providers', mod));
   }
 
-  // Generate a mock
-  const mockedProviders = providers.map((provider: any) => {
-    return {
-      provide: provider,
-      useValue: {},
-    };
-  });
+  // Generate the mock providers
+  const mockedProviders = providers
+    .filter((provider: any) => {
+      return provider !== undefined;
+    })
+    .map((provider: any) => {
+      return {
+        provide: provider,
+        useValue: {},
+      };
+    });
 
   // Generate an application instance
   const testingModule = await Test.createTestingModule({
+    imports: [AppModule],
     controllers: controllers,
     providers: mockedProviders,
   }).compile();
@@ -38,8 +44,7 @@ async function bootstrap(): Promise<void> {
   app.setGlobalPrefix('api');
 
   // Generate API JSON
-  const doc_options = new DocumentBuilder().setTitle(`API Document`).build();
-  const doc = SwaggerModule.createDocument(app, doc_options);
+  const doc = Helper.getOpenAPIDoc(app);
   const docJson = JSON.stringify(doc);
 
   // Check the argument
