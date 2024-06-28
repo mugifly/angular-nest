@@ -3,10 +3,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "pwa-chrome",
+      "name": "Debug for client",
+      "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start:dev",
+      "webRoot": "${workspaceFolder}/client",
       "url": "http://localhost:4200/"
     },
     {
