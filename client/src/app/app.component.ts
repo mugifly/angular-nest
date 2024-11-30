@@ -8,11 +8,10 @@ import { Article } from '../.api-client/models/article';
 import { environment } from '../environments/environment';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [RouterOutlet, AsyncPipe, DatePipe, MaterialModule],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [RouterOutlet, AsyncPipe, DatePipe, MaterialModule]
 })
 export class AppComponent {
   $exampleText!: Observable<string>;
