@@ -2,7 +2,7 @@
 
 Simple web app template with Angular + NestJS + ng-openapi-gen.
 
-Deployable on Heroku, Render, Google App Engine (GAE) and other hosting services using with/without Docker ([learn more](https://github.com/mugifly/angular-nest/wiki/#Deployments)).
+Deployable on Heroku, Render, Google App Engine (GAE), Cloud Run and other hosting services using with/without Docker ([learn more](https://github.com/mugifly/angular-nest/wiki/#Deployments)).
 
 [![Build](https://github.com/mugifly/angular-nest/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/mugifly/angular-nest/actions/workflows/build.yml)
 
