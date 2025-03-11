@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:22-slim
 
 WORKDIR /opt/app/
 
